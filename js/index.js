@@ -94,6 +94,17 @@ $(function() {
     		$(".page4-txt").fadeIn("slow")
     	})
     })
+    
+    $(".musicbtn").click(function(){
+    	var music=$("#music")[0];//相当于 document.getElementByID("#music")
+    	if(music.paused){
+    		music.play();
+    		$(this).attr("src","img/musicBtn.png");
+    	}else{
+    		music.pause();
+    		$(this).attr("src","img/musicBtnOff.png");
+    	}
+    })
 
 })
 /*$(document).ready(function(){
